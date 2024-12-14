@@ -8,18 +8,11 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Middleware\AdminMiddleware;
-use App\Models\Service;
 
-//Route::get('/services', function () {
-  //  return view('services'); // Matches resources/views/services.blade.php
-//});
 
+//User routes to all pages and admin login page
 Route::get('/', [PageController::class, 'index']);
 Route::get('/services', [ServiceController::class, 'index'])->name('services');
-Route::post('/services/add', [ServiceController::class, 'addService']);
-Route::delete('/services/{id}/remove', [ServiceController::class, 'removeService']);
-Route::get('/services/{id}/edit', [ServiceController::class, 'editService']);
-Route::put('/services/{id}/update', [ServiceController::class, 'updateService']);
 Route::get('/courses', [CourseController::class, 'index'])->name('courses');
 Route::post('/contact.submit', [ContactController::class, 'store'])->name('contact.submit');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
@@ -27,9 +20,9 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/admin', [AdminController::class, 'showLogin'])->name('admin.login');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
 
+//routes protected by authorization
 Route::group(['middleware'=> AdminMiddleware::class], function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::resource('/admin/courses', CourseController::class);
     Route::get('/admin/services', [ServiceController::class, 'adminIndex'])->name('admin.services');
     Route::post('/admin/services/add', [ServiceController::class, 'addService'])->name('admin.services.add');
     Route::delete('/admin/services/{id}/remove', [ServiceController::class, 'removeService'])->name('admin.services.remove');

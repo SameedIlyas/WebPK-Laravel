@@ -3,9 +3,12 @@
 @section('title', 'Admin Dashboard')
 
 @section('content')
-    <h1>Admin Dashboard</h1>
-    <div>
-        <a href="{{ route('services.index') }}">Manage Services</a>
-        <a href="{{ route('courses.index') }}">Manage Courses</a>
+    <div class="admin-dashboard">
+        <h1 class="dashboard-title">Admin Dashboard</h1>
+
+        <div class="button-container">
+            <a href="{{ route('admin.services') }}" class="btn">Manage Services</a>
+            <a href="{{ route('admin.courses') }}" class="btn">Manage Courses</a>
+        </div>
     </div>
 @endsection

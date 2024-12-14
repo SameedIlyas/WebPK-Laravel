@@ -696,6 +696,22 @@ textarea {
     }
 }
 
+/* Container for the entire dashboard */
+.admin-dashboard {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Dashboard title styles */
+.dashboard-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar-links {

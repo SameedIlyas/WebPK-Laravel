@@ -1,10 +1,12 @@
 # Laravel Web Application - Software House Services & Courses
 
 ### Group Members: 
-Sameed Ilyas (426125)
-Muhammad Taha Salaar (415961)
-Muhammad Zain (405749)
-(BESE-13 B)
+Sameed Ilyas (426125)  
+Muhammad Taha Salaar (415961)  
+Muhammad Zain (405749)  
+(BESE-13 B)  
+  
+Github Link: https://github.com/SameedIlyas/WebPK-Laravel
 
 ## Description
 This project is a dynamic web application built using the Laravel PHP framework for a software house company. The application provides services and courses to users and integrates various Laravel features such as MVC architecture, routing, Blade templates, middleware, and Eloquent ORM for database interaction. Additionally, user roles (admin and regular users) are implemented to restrict access to certain routes and pages.

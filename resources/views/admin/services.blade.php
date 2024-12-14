@@ -14,7 +14,7 @@
     <!-- Add a Service Form -->
     <section id="add-service" class="section-padding">
         <h2 class="section-title">Add a Service</h2>
-        <form method="POST" action="{{ url('/services/add') }}">
+        <form method="POST" action="{{ url('admin/services/add') }}">
             @csrf
             <input type="text" id="serviceName" name="name" placeholder="Enter Service Name" required>
             <input type="number" id="servicePrice" name="price" placeholder="Enter Price (USD)" required>
